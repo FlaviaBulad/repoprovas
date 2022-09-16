@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node dist/app.js",
-    "test": "jest --no-cache",
+    "test": "npx dotenv-cli -e .env.test jest -i",
     "build": "tsc && npx prisma migrate deploy",
     "dev": "nodemon src/app.ts"
   },
@@ -20,6 +20,9 @@
     "url": "https://github.com/FlaviaBulad/projeto20-repoprovas/issues"
   },
   "homepage": "https://github.com/FlaviaBulad/projeto20-repoprovas#readme",
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
+  },
   "dependencies": {
     "@prisma/client": "^4.3.1",
     "bcrypt": "^5.0.1",
@@ -40,6 +43,7 @@
     "@types/express": "^4.17.14",
     "@types/joi": "^17.2.3",
     "@types/jsonwebtoken": "^8.5.9",
+    "@types/node": "^18.7.18",
     "@types/pg": "^8.6.5",
     "faker": "^6.6.6",
     "jest": "^29.0.3",

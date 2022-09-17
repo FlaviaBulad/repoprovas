@@ -9,9 +9,5 @@ export interface CreateUserData {
 }
 
 export interface UserId {
-  userId: number;
-}
-
-export interface UserToken {
-  token: string;
+  id: number;
 }

@@ -8,3 +8,9 @@ export async function signUp(req: Request, res: Response) {
   const user = await userService.signUp(userData);
   res.status(httpUtils.CREATED).send(user);
 }
+
+export async function signIn(req: Request, res: Response) {
+  const userData: UserData = req.body;
+  const signIn = await userService.signIn(userData);
+  res.status(httpUtils.CREATED).send(signIn);
+}

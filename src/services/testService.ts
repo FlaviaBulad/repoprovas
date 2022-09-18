@@ -62,3 +62,21 @@ export async function createTest(testData) {
   };
   await testRepository.insert(test);
 }
+
+export async function getByDiscipline() {
+  const testsList = await testRepository.getByDiscipline();
+
+  for (let periodo of testsList) {
+    for (let discipline of periodo.disciplines) {
+      for (let teacherDiscipline of discipline.teacherDiscipline) {
+        let teacher = teacherDiscipline.teacher.name;
+        for (let test of teacherDiscipline.tests) {
+          for (let testName of test.category.tests)
+            testName.name = `${testName.name} (${teacher})`;
+        }
+      }
+    }
+  }
+
+  return testsList;
+}

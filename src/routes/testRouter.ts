@@ -13,6 +13,6 @@ testRouter.post(
   validateSchema(testSchema),
   testController.createTest
 );
-testRouter.get('/tests');
+testRouter.get('/tests', testController.getTestByDiscipline);
 
 export default testRouter;

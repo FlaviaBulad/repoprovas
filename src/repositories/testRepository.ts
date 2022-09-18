@@ -43,3 +43,35 @@ export async function getByDiscipline() {
     }
   });
 }
+
+export async function getByTeacher() {
+  return prisma.teachers.findMany({
+    select: {
+      name: true,
+      teacherDiscipline: {
+        select: {
+          discipline: {
+            select: {
+              name: true
+            }
+          },
+          tests: {
+            distinct: ['categoryId'],
+            select: {
+              category: {
+                select: {
+                  name: true,
+                  tests: {
+                    select: {
+                      name: true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  });
+}

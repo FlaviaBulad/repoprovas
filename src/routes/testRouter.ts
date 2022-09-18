@@ -13,6 +13,7 @@ testRouter.post(
   validateSchema(testSchema),
   testController.createTest
 );
-testRouter.get('/tests', testController.getTestByDiscipline);
+testRouter.get('/tests/disciplines', testController.getTestByDiscipline);
+testRouter.get('/tests/teachers', testController.getTestByTeacher);
 
 export default testRouter;

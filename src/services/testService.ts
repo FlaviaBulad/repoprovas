@@ -1,5 +1,3 @@
-import { TestData } from '../types/testTypes';
-
 import * as categoryRepository from '../repositories/categoryRepository';
 import * as disciplineRepository from '../repositories/disciplineRepository';
 import * as teacherRepository from '../repositories/teacherRepository';
@@ -74,6 +72,22 @@ export async function getByDiscipline() {
           for (let testName of test.category.tests)
             testName.name = `${testName.name} (${teacher})`;
         }
+      }
+    }
+  }
+
+  return testsList;
+}
+
+export async function getByTeacher() {
+  const testsList = await testRepository.getByTeacher();
+
+  for (let teacher of testsList) {
+    for (let teacherDiscipline of teacher.teacherDiscipline) {
+      let discipline = teacherDiscipline.discipline.name;
+      for (let test of teacherDiscipline.tests) {
+        for (let testName of test.category.tests)
+          testName.name = `${testName.name} (${discipline})`;
       }
     }
   }

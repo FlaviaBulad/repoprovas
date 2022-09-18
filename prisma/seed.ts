@@ -45,11 +45,6 @@ async function main() {
     ],
     skipDuplicates: true
   });
-
-  await prisma.users.createMany({
-    data: [{ email: 'test@driven.com', password: '1234' }],
-    skipDuplicates: true
-  });
 }
 
 main()

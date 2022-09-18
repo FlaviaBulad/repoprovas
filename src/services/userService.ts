@@ -15,20 +15,23 @@ export async function getUserEmail(email: string) {
   return userEmail;
 }
 
-async function validatePassword(password: string, confirm_password: string) {
+export async function validatePassword(
+  password: string,
+  confirm_password: string
+) {
   if (password !== confirm_password)
     throw errorTypes.unprocessableEntity(
       'The password confirmation does not match'
     );
 }
 
-async function validateSignUp(userData: CreateUserData) {
+export async function validateSignUp(userData: CreateUserData) {
   const { email, password, confirm_password } = userData;
   const userExists = await getUserEmail(email);
   if (!userExists) {
     await validatePassword(password, confirm_password);
     const hashedPassword: string = await encryptUtils.hashPassword(password);
-
+    delete userData.confirm_password;
     const signUpData = {
       email,
       password: hashedPassword
@@ -41,14 +44,13 @@ async function validateSignUp(userData: CreateUserData) {
 
 export async function signUp(userData: CreateUserData) {
   const signUp = await validateSignUp(userData);
-  delete userData.confirm_password;
   await userRepository.insert(signUp);
 }
 
 async function validateSignIn(userData: UserData) {
   const userExists = await getUserEmail(userData.email);
   if (!userExists) {
-    throw errorTypes.notFoundError('Email not registered');
+    throw errorTypes.unauthorizedError('Email or password incorrect');
   }
   await encryptUtils.syncHashedPassword(userData);
 }

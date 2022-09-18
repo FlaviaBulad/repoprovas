@@ -5,8 +5,8 @@ import httpUtils from '../utils/httpUtils';
 
 export async function signUp(req: Request, res: Response) {
   const userData: CreateUserData = req.body;
-  const user = await userService.signUp(userData);
-  res.status(httpUtils.CREATED).send(user);
+  const signUp = await userService.signUp(userData);
+  res.status(httpUtils.CREATED).send(signUp);
 }
 
 export async function signIn(req: Request, res: Response) {

@@ -1,9 +1,8 @@
 # <p align = "center"> Project RepoProvas API</p>
 
 <p align="center">
-   <video width="320">
-   <source src="https://cdn-icons-mp4.flaticon.com/512/6172/6172540.mp4">
-   </video>
+   <img src="https://cdn-icons-mp4.flaticon.com/512/6172/6172540.mp4" width="32px"/>
+  
 </p>
 
 <p align = "center">

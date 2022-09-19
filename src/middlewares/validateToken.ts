@@ -14,11 +14,13 @@ export async function validateToken(
   next: NextFunction
 ) {
   const { authorization } = req.headers;
-  const token: string | undefined = authorization?.replace('Bearer ', '');
+  // const token: string | undefined = authorization?.replace('Bearer ', '');
+  const token = req.headers.authorization;
 
   if (!token) {
     throw ErrorTypes.unauthorizedError('Token not found');
   }
+
   const SECRET: string = process.env.TOKEN_SECRET ?? '';
 
   try {

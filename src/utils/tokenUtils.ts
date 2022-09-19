@@ -24,11 +24,11 @@ export async function generateToken(userData: UserData) {
 
   const token = jwt.sign(payload, SECRET, jwtConfig);
 
-  const config = {
-    headers: {
-      Authorization: `Bearer ${token}`
-    }
-  };
+  // const config = {
+  //   headers: {
+  //     Authorization: `Bearer ${token}`
+  //   }
+  // };
 
-  return config;
+  return token;
 }

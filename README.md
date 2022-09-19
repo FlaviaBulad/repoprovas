@@ -1,7 +1,7 @@
 # <p align = "center"> Project RepoProvas API</p>
 
 <p align="center">
-   <img src="https://cdn-icons-mp4.flaticon.com/512/6172/6172540.mp4" width="32px"/>
+   <img src="https://cdn-icons-png.flaticon.com/512/4838/4838291.png" width="320px"/>
   
 </p>
 
@@ -272,7 +272,7 @@ npm test
 
 - [Awesome Badges](https://github.com/Envoy-VC/awesome-badges)
 
-- <a href="https://www.flaticon.com/free-animated-icons/document" title="document animated icons">Document animated icons created by Freepik - Flaticon</a>
+- <a href="https://www.flaticon.com/free-icons/online-test" title="online test icons">Online test icons created by Andrean Prabowo - Flaticon</a>
   </br>
 
 ## 👩‍💻 Authors

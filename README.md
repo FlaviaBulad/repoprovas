@@ -8,6 +8,7 @@
 
 <p align = "center">
    <img src="https://img.shields.io/badge/author-Flávia Bulad-4dae71?style=flat-square" />
+   
    <img src="https://img.shields.io/github/languages/count/FlaviaBulad/projeto20-repoprovas?color=4dae71&style=flat-square" />
 </p>
 
@@ -17,6 +18,15 @@
 - At RepoProvas anyone can search for old tests of their subjects and teachers or send old exams to help fellow freshmen.
 
 ---
+
+## 🚀 Deploy
+
+<p>
+<a href="https://server-repoprovas.herokuapp.com/">  <img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white"/>
+</a>
+  
+ 
+</p>
 
 ## 💻 Technology and Concepts
 
@@ -258,3 +268,15 @@ To perform integration tests, run the following command:
 ```
 npm test
 ```
+
+## 👏 Acknowledgements
+
+- [Awesome Badges](https://github.com/Envoy-VC/awesome-badges)
+
+- <a href="https://www.flaticon.com/free-animated-icons/document" title="document animated icons">Document animated icons created by Freepik - Flaticon</a>
+  </br>
+
+## 👩‍💻 Authors
+
+- Flávia Bulad is a student at Driven Education and is putting effort into it to become a FullStack Web Developer.
+  <br/>

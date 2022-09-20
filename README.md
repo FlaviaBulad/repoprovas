@@ -14,7 +14,7 @@
 ## 📋 Description
 
 - RepoProvas is a system for sharing tests between students.
-- At RepoProvas anyone can search for old tests of their subjects and teachers or send old exams to help fellow freshmen.
+- At RepoProvas anyone can search for old tests by subjects and teachers or post to help fellow freshmen.
 
 ---
 
